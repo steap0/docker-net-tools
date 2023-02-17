@@ -5,8 +5,8 @@ LABEL description="Common net utils (Alpine)"
 LABEL website="https://github.com/steap0/docker-net-tools"
 
 RUN apk --no-cache add  bind-tools \
-                        curl \
-                        wget \
                         busybox-extras \
+                        curl \
+                        iproute2 \
                         nmap \
-                        iproute2
+                        wget

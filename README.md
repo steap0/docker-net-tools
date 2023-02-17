@@ -5,9 +5,11 @@ Docker image with common networking tools.
 - dig
 - host
 - iproute2
+- ncat
 - nmap
 - nslookup
 - ping
 - telnet
+- traceroute
 - wget
 - whois
