@@ -1,0 +1,17 @@
+FROM ubuntu:kinetic
+
+LABEL maintainer="Maksim Bunegin"
+LABEL description="Common net utils (Ubuntu)"
+LABEL website="https://github.com/steap0/docker-net-tools"
+
+RUN apt update \
+    && apt install -y   iputils-ping \
+                        dnsutils \
+                        host \
+                        curl \
+                        wget \
+                        telnet \
+                        nmap \
+                        iproute2 \
+                        whois \
+    && rm -rf /var/lib/apt/lists/*
