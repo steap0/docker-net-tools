@@ -10,12 +10,11 @@ case $1 in
     ;;
   *)
     echo "How to use:"
-    echo "./build.sh ubuntu|alpine [version]"
+    echo "./build.sh ubuntu|alpine"
     exit 1
 esac
 
-IMAGE_NAME="${IMAGE_PREFIX}:${SRC_IMAGE}-latest"
-[ ! -z $2 ] && IMAGE_NAME_WITH_VERSION="${IMAGE_PREFIX}:${SRC_IMAGE}-${IMAGE_NAME_WITH_VERSION}"
+IMAGE_NAME="${IMAGE_PREFIX}:latest-${SRC_IMAGE}"
 DOCKERFILE="Dockerfile.${SRC_IMAGE}"
 
 docker build -t $IMAGE_NAME -f $DOCKERFILE .
